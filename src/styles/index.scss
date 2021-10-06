@@ -1,0 +1,45 @@
+@import "./components/watchList.scss";
+@import "./components/listedTitles.scss";
+
+@font-face {
+  font-family: "ObjectSans";
+  src: url("./fonts/ObjectSans-Regular.woff2");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "ObjectSans";
+  src: url("./fonts/ObjectSans-Thin.woff2");
+  font-weight: lighter;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-content: center;
+  background-color: rgb(53, 53, 53);
+}
+
+.wrapper {
+  height: calc(608px * 1.3);
+  width: calc(344px * 1.3);
+  overflow: hidden;
+  background-image: url("../images/background-image.png");
+  background-position: 100%;
+  background-size: cover;
+}
+.big {
+  font-family: "ObjectSans";
+  font-weight: regular;
+  font-size: 1.8em;
+}
+.small {
+  font-family: "ObjectSans";
+  font-weight: lighter;
+  font-size: 1.1em;
+}
