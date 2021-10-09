@@ -30,8 +30,8 @@
   width: 100vw;
   overflow: hidden;
   background-image: url("../images/background-image.png");
-  background-position: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .big {
   font-family: "ObjectSans";
