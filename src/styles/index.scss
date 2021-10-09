@@ -26,8 +26,8 @@
 }
 
 .wrapper {
-  height: calc(608px * 1.3);
-  width: calc(344px * 1.3);
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
   background-image: url("../images/background-image.png");
   background-position: 100%;
