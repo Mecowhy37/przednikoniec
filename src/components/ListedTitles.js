@@ -36,19 +36,21 @@ const ListedTitles = ({ titles, setTitles, open, setOpen }) => {
   };
   return (
     <div id="listedTitles">
-      {titles
-        .sort((a, b) => a.watched - b.watched)
-        .map(({ title, watched }, index) => (
-          <div key={index} title={title} className={`tile ${watched ? "watched" : ""}`}>
-            <div className={`icons ${open === title ? "open" : ""}`}>
-              <img id="eye" src={eye} alt="" onClick={watch} />
-              <img id="trash" src={trash} alt="" onClick={usun} />
+      <div id="wrapper">
+        {titles
+          .sort((a, b) => a.watched - b.watched)
+          .map(({ title, watched }, index) => (
+            <div key={index} title={title} className={`tile ${watched ? "watched" : ""}`}>
+              <div className={`icons ${open === title ? "open" : ""}`}>
+                <img id="eye" src={eye} alt="" onClick={watch} />
+                <img id="trash" src={trash} alt="" onClick={usun} />
+              </div>
+              <h1 className="big" onClick={toggleOpen}>
+                {title}
+              </h1>
             </div>
-            <h1 className="big" onClick={toggleOpen}>
-              {title}
-            </h1>
-          </div>
-        ))}
+          ))}
+      </div>
     </div>
   );
 };
